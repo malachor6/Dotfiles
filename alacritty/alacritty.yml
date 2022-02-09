@@ -1,0 +1,106 @@
+#
+# modified 2021-06-28
+#
+
+env:
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+window:
+  # Spread additional padding evenly around the terminal content.
+  padding:
+    x: 10
+    y: 10
+  # Remove buttons
+#  decorations: none
+  # Open in full screen 
+#  startup_mode: SimpleFullscreen
+  # Dimensions if not SimpleFullscreen
+  dimensions:
+    columns: 140
+    lines: 38
+
+# Make background slightly transparent
+window.opacity: 0.60
+
+cursor:
+  # Block Underline or Beam
+  style: Block
+
+font:
+  normal:
+    # Needs to be powerline font if using zsh theme with powerline
+    family: Source Code Pro for Powerline   
+  # Font size
+  size: 17
+
+  # Better font rendering for mac
+  use_thin_strokes: true
+colors:
+  # Default colors
+  primary:
+    background: '#2c2c2c'
+    foreground: '#d6d6d6'
+
+    dim_foreground:    '#dbdbdb'
+    bright_foreground: '#d9d9d9'
+    dim_background:    '#202020' # not sure
+    bright_background: '#3a3a3a' # not sure
+
+  # Cursor colors
+  cursor:
+    text:   '#2c2c2c'
+    cursor: '#d9d9d9'
+
+  # Normal colors
+  normal:
+    black:   '#1c1c1c'
+    red:     '#bc5653'
+    green:   '#909d63'
+    yellow:  '#ebc17a'
+    blue:    '#7eaac7'
+    magenta: '#aa6292'
+    cyan:    '#86d3ce'
+    white:   '#cacaca'
+
+  # Bright colors
+  bright:
+    black:   '#636363'
+    red:     '#bc5653'
+    green:   '#909d63'
+    yellow:  '#ebc17a'
+    blue:    '#7eaac7'
+    magenta: '#aa6292'
+    cyan:    '#86d3ce'
+    white:   '#f7f7f7'
+
+  # Dim colors
+  dim:
+    black:   '#232323'
+    red:     '#74423f'
+    green:   '#5e6547'
+    yellow:  '#8b7653'
+    blue:    '#556b79'
+    magenta: '#6e4962'
+    cyan:    '#5c8482'
+    white:   '#828282'
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When true, selected text will be copied to the primary clipboard
+  save_to_clipboard: true
+
+# Login shell with arguments
+shell:
+  program: /bin/bash
+  args:
+    - --login
+
+# Startup directory, unset or None for home directory
+working_directory: None
+
