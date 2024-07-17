@@ -1,0 +1,18 @@
+add_newline = false
+[line_break]
+disabled = true
+[shell]
+ #fish_indicator = ""
+ powershell_indicator = ">_"
+ unknown_indicator = "mystery shell"
+ bash_indicator="><"
+ zsh_indicator="<z>"
+ style = " Purple Bold"
+ disabled = false
+
+[character]
+success_symbol = "[❯](purple) "
+error_symbol = "[✗](bold yellow) "
+
+[python]
+symbol = "🐍 " 
